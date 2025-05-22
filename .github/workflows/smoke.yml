@@ -22,3 +22,10 @@ jobs:
           browser: chrome
           headed: false
           command: npm run test:smoke
+      - name: Pubkish Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cypress HTML Reports
+          path: cypress/reports/
+          if-no-files-found: ignore
