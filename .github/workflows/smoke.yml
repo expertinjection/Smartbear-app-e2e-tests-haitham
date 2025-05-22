@@ -22,7 +22,7 @@ jobs:
           browser: chrome
           headed: false
           command: npm run test:smoke
-      - name: Pubkish Test Reports
+      - name: Publish Test Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
